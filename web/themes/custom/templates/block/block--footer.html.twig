@@ -1,0 +1,60 @@
+<section id="" class="footer-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-5 text-center">Get in Touch</h2>
+        <div class="row">
+            <div class="col-md-6">
+            <h5>SOCIAL MEDIA SITES</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex align-items-center">
+                <img src="{{ directory }}/images/4494479.png" width="50px" alt="Facebook Logo">
+                <span class="field" style="margin-left: 5px;">{{ content.field_social_media_link_1 }}</span>
+              </li>
+              <li class="list-group-item d-flex align-items-center">
+              <img src="{{ directory }}/images/4494479.png" width="50px" alt="Facebook Logo">
+              <span class="field" style="margin-left: 5px;">{{ content.field_social_media_link_2 }}</span>
+              </li>
+            </ul>
+            </div>
+
+          <div class="col-md-6">
+            <h5>MAIN OFFICE</h5>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span class="label">Address:</span>
+                <span class="field field--name-field-address field--type-string field--label-hidden field__item">{{ content.field_address|without('label')|raw }}</span>
+              </li>
+              <li class="list-group-item">
+                <span class="label">Email:</span>
+                <span class="field field--name-field-email field--type-string field--label-hidden field__item">{{ content.field_email|without('label')|raw }}</span>
+              </li>
+              <li class="list-group-item">
+                <span class="label">Tel. No.:</span>
+                <span class="field field--name-field-telephone field--type-string field--label-hidden field__item">{{ content.field_telephone|without('label')|raw }}</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12">
+            {% if content.field_gmap['#markup'] is defined %}
+              <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{{ content.field_gmap }}"></iframe>
+            {% else %}
+              <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{{ content.field_gmap }}"></iframe>
+            {% endif %}
+          </div>
+        </div>
+
+        <hr>
+        <div class="text-center">
+          <div class="footer-logos">
+            <img src="{{ base_path ~ directory }}/images/makati_logo.png" width="75px" alt="Makati Logo">
+            <img src="{{ base_path ~ directory }}/images/pdp_logo.png" width="75px" alt="PDP Logo">
+            <img src="{{ base_path ~ directory }}/images/sk_pdp_logo.png" width="75px" alt="SK PDP Logo">
+          </div>
+          <p>Copyright © {{ "now"|date("Y") }} BARANGAY PIO DEL PILAR</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
