@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
     // Handle dropdown menu clicks
     document.querySelectorAll("#navigation .menu__item--has-children").forEach(item => {

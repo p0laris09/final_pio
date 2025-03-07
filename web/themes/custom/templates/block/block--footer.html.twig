@@ -4,7 +4,7 @@
       <div class="col-12">
         <h2 class="mb-5 text-center">Get in Touch</h2>
         <div class="row">
-            <div class="col-md-6">
+          <div class="col-md-6">
             <h5>SOCIAL MEDIA SITES</h5>
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex align-items-center">
@@ -12,11 +12,11 @@
                 <span class="field" style="margin-left: 5px;">{{ content.field_social_media_link_1 }}</span>
               </li>
               <li class="list-group-item d-flex align-items-center">
-              <img src="{{ directory }}/images/4494479.png" width="50px" alt="Facebook Logo">
-              <span class="field" style="margin-left: 5px;">{{ content.field_social_media_link_2 }}</span>
+                <img src="{{ directory }}/images/4494479.png" width="50px" alt="Facebook Logo">
+                <span class="field" style="margin-left: 5px;">{{ content.field_social_media_link_2 }}</span>
               </li>
             </ul>
-            </div>
+          </div>
 
           <div class="col-md-6">
             <h5>MAIN OFFICE</h5>
@@ -35,15 +35,9 @@
               </li>
             </ul>
           </div>
-
-          <div class="col-12">
-            {% if content.field_gmap['#markup'] is defined %}
-              <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{{ content.field_gmap }}"></iframe>
-            {% else %}
-              <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{{ content.field_gmap }}"></iframe>
-            {% endif %}
+          <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7723.588046768792!2d121.00853806840234!3d14.553768316769302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c90d4b58d64f%3A0xaa203a2a94965d64!2sPio%20del%20Pilar%2C%20Makati%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1663489815352!5m2!1sen!2sph" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-        </div>
 
         <hr>
         <div class="text-center">

@@ -81,7 +81,6 @@ pre {
   top: 0;
   left: 0;
   background: rgba(0, 0, 128, 0.65);
-  z-index: 1;
 }
 .header .head-title, .header .nav-ct {
   z-index: 2;
