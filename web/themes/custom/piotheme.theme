@@ -1,0 +1,8 @@
+<?php 
+function piotheme_preprocess_node(&$variables) {
+  if ($variables['node']->bundle() == 'services') {
+    $variables['brgyid_req'] = $variables['node']->get('field_brgyid_req')->view();
+    $variables['clearance_req'] = $variables['node']->get('field_clearance_req')->view();
+  }
+}
+?>

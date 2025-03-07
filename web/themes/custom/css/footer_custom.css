@@ -7,9 +7,11 @@
 
 .footer-section h5 {
     font-size: 20px;
-    color: #f2c912; /* Gold Color */
-    margin-bottom: 15px;
+    color: #ffff01; /* Updated to Yellow Color */
+    margin-bottom: 5px; /* Adjust margin */
     text-align: left; /* Align h5 elements to the left */
+    padding: 5px 25px; /* Adjust padding */
+    line-height: 1.2; /* Adjust line height */
 }
 
 .footer-section .container {
@@ -59,7 +61,14 @@ iframe {
     width: 100%;
     max-width: 800px;
     height: 300px;
-    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+.footer-section iframe {
+    width: 100%;
+    max-width: 100%; /* Ensure iframe takes full width of col-12 */
+    height: 350px; /* Adjust height as needed */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     margin-bottom: 30px;
 }
@@ -83,7 +92,7 @@ iframe {
     color: #fff;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1130px) {
     .footer-section .container {
         flex-direction: column;
         text-align: center;

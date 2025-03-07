@@ -1,0 +1,46 @@
+<section id="" class="service-offer-banner common_bg">
+  <div class="container">
+    <div class="row service-offer">
+      <div class="col-12 col-md-4 service-offer-img text-center">
+        <img src="https://brgypiodelpilarmakati.com.ph/assets/images/services/id.svg" alt="">
+      </div>
+      <div class="col-12 col-md-8 service-offer-info">
+        <h5>Barangay ID</h5>
+        <p>
+          <b>New Applicant</b>
+          {% if content.field_brgyid_req is defined %}
+            <ol>
+              {% for item in content.field_brgyid_req['#items'] %}
+                <li>{{ item['value'] }}</li>
+              {% endfor %}
+            </ol>
+          {% endif %}
+          <button type="button" class="btn btn-primary">
+            <i class="fas fa-file-download"></i> Download Application Form
+          </button>
+        </p>
+      </div>
+    </div>
+
+    <div class="row service-offer">
+      <div class="col-12 col-md-4 service-offer-img text-center order-lg-last">
+        <img src="https://brgypiodelpilarmakati.com.ph/assets/images/services/docs.svg" alt="">
+      </div>
+      <div class="col-12 col-md-8 service-offer-info">
+        <h5>Barangay Clearance</h5>
+        <p>
+          {% if content.field_clearance_req is defined %}
+            <ol>
+              {% for item in content.field_clearance_req['#items'] %}
+                <li>{{ item['value'] }}</li>
+              {% endfor %}
+            </ol>
+          {% endif %}
+          <button type="button" class="btn btn-primary">
+            <i class="fas fa-file-download"></i> Download Application Form
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

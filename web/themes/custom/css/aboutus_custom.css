@@ -1,0 +1,192 @@
+/* About Us Section */
+.about-banner {
+  background: url("../images/sample/about.jpg") fixed no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+.about-banner:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.about-banner .about-title {
+  z-index: 2;
+  color: #fff;
+  margin-top: 100px;
+}
+.about-banner .about-title h5 {
+  font-size: 35px;
+  border-left: 5px solid var(--primary-color);
+  padding-left: 10px;
+}
+.about-banner .about-title h2 {
+  font-size: 45px;
+  color: #0dcaf0;
+  letter-spacing: 2px;
+  margin-top: 50px;
+}
+.about-banner .about-title h2 small {
+  font-size: 26px;
+}
+.about-banner .about-title p {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.about-content1 {
+  background: url("../images/about-bg.jpg") fixed no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+.about-content1:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(245, 245, 245, 0.59);
+  z-index: 1;
+}
+.about-content1 .about-data .fs-img, .about-content1 .about-data .fs-text, .about-content1 .about-data h2 {
+  z-index: 2;
+}
+.about-content1 .about-data .fs-img {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.about-content1 .about-data .fs-img img {
+  width: 200px;
+}
+.about-content1 .about-data .about-content1-details {
+  padding: 4em 2em 4em 3em;
+  background-color: var(--firstSectionBg);
+}
+.about-content1 .about-data .about-content1-details .about-content1-row {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  grid-gap: 20px;
+  margin-bottom: 40px;
+}
+.about-content1 .about-data .about-content1-details .about-content1-row .about-contect1-icon {
+  text-align: center;
+}
+.about-content1 .about-data .about-content1-details .about-content1-row .about-contect1-icon i.fas {
+  font-size: 34px;
+  color: var(--primary-color);
+}
+.about-content1 .about-data .about-content1-details .about-content1-row .about-contect1-info h4 {
+  font-weight: 500;
+}
+.about-content1 .about-data .about-content1-img {
+  background: url("../images/sample/about_content_1.jpg") no-repeat;
+  background-size: cover;
+  display: grid;
+  align-items: center;
+  color: #fff;
+  padding: 10vh;
+}
+.about-content1 .about-data .about-content1-img h4 {
+  font-size: 100px;
+}
+
+.about-content2 {
+  background: url("../images/sample/about_content_2.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  align-items: center;
+  color: #fff;
+  padding: 10vh;
+  min-height: 50vh;
+}
+.about-content2 h2 {
+  font-size: 35px;
+  color: #0dcaf0;
+  letter-spacing: 2px;
+}
+.about-content2 p {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* Responsive CSS */
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+  .about-banner .about-title {
+    margin-top: auto;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .about-banner .about-title {
+    color: #fff;
+    margin-top: 0px;
+  }
+  .about-banner .about-title h5 {
+    font-size: 29px;
+  }
+  .about-banner .about-title h2 {
+    font-size: 29px;
+    letter-spacing: 2px;
+    margin-top: 25px;
+  }
+  .about-banner .about-title h2 small {
+    font-size: 22px;
+  }
+  .about-banner .about-title p {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .about-banner {
+    min-height: auto;
+  }
+  .about-banner:before {
+    height: auto;
+  }
+  section, .services-banner, .contact-banner {
+    padding: 54px 0;
+  }
+  .about-banner .about-title {
+    bottom: 200px;
+    z-index: 2;
+    color: #fff;
+    margin-top: auto;
+  }
+  .about-banner .about-title h2 {
+    font-size: 23px;
+    letter-spacing: 2px;
+    margin-top: 38px;
+  }
+  .about-banner .about-title h2 small {
+    font-size: 17px;
+  }
+  .about-banner .about-title p {
+    font-size: 15px;
+  }
+  .about-content1 .about-content1-img {
+    padding: 4vh;
+  }
+  .about-content2 {
+    padding: 4vh;
+  }
+  .team-content .team-info .team-details {
+    padding: 10px;
+  }
+  .team-content .team-info .team-details h3 {
+    font-size: 15px;
+  }
+  .team-content .team-info .team-details p {
+    font-size: 13px;
+  }
+}

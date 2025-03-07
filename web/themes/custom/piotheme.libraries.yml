@@ -15,6 +15,7 @@ global-styling:
       css/services_custom.css: {}
       css/gallery_custom.css: {}
       css/header_custom.css: {}
+      css/aboutus_custom.css: {}
       
   js:
     https://www.googletagmanager.com/gtag/js?id=G-XKXXKF1PS2: {}
@@ -22,6 +23,7 @@ global-styling:
     assets/third_party/js/jquery.js: {}
     js/custom_js.js: {}
     js/jquery.cycle.all.min.js: {}
+    js/footer_custom.js: {}
 
   dependencies:
     - core/jquery
