@@ -1,8 +1,12 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 .footer-section {
     padding: 50px 0;
     background-color: #1e1e1e;
     color: #fff;
     text-align: center;
+    margin: 0; /* Remove any default margin */
 }
 
 .footer-section h5 {
@@ -16,9 +20,28 @@
 
 .footer-section .container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0; /* Remove any default padding */
+}
+
+.footer-section .row {
+    width: 100%;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 30px;
+    justify-content: center;
+    margin: 0 -15px;
+}
+
+.footer-section .col-12,
+.footer-section .col-xs-12,
+.footer-section .col-sm-12,
+.footer-section .col-md-12,
+.footer-section .col-lg-12 {
+    padding: 15px;
 }
 
 .footer-section .list-group {
@@ -30,6 +53,9 @@
     background: none;
     border: none;
     font-size: 16px;
+    padding: 5px 10px; /* Adjust padding */
+    margin-bottom: 5px; /* Adjust margin */
+    line-height: 1.2; /* Adjust line height */
 }
 
 .footer-section .list-group-item .label {
@@ -55,14 +81,6 @@
 
 .footer-section .list-group-item a:hover {
     color: #f2c912;
-}
-
-iframe {
-    width: 100%;
-    max-width: 800px;
-    height: 300px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    margin-bottom: 30px;
 }
 
 .footer-section iframe {
@@ -98,7 +116,7 @@ iframe {
         text-align: center;
     }
 
-    iframe {
+    .footer-section iframe {
         height: 200px;
     }
 }
@@ -106,11 +124,4 @@ iframe {
 /* New rule to make mb-5 text white */
 .mb-5 {
     color: #fff;
-}
-
-/* Adjust the height of list-group-item elements */
-.list-group-item.d-flex.align-items-center {
-  padding: 5px 10px; /* Adjust padding */
-  margin-bottom: 5px; /* Adjust margin */
-  line-height: 1.2; /* Adjust line height */
 }

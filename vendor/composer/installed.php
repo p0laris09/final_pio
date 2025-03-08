@@ -389,9 +389,9 @@
             'dev_requirement' => false,
         ),
         'drupal/libraries' => array(
-            'pretty_version' => '4.0.5',
-            'version' => '4.0.5.0',
-            'reference' => '4.0.5',
+            'pretty_version' => '4.0.0',
+            'version' => '4.0.0.0',
+            'reference' => '4.0.0',
             'type' => 'drupal-module',
             'install_path' => __DIR__ . '/../../web/modules/contrib/libraries',
             'aliases' => array(),

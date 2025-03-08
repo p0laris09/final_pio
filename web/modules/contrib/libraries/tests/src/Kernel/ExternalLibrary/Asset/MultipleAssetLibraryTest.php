@@ -72,7 +72,7 @@ class MultipleAssetLibraryTest extends AssetLibraryTestBase {
       ]],
       'dependencies' => [],
       'license' => [
-        'name' => $this->getLicenseName(),
+        'name' => 'GNU-GPL-2.0-or-later',
         'url' => 'https://www.drupal.org/licensing/faq',
         'gpl-compatible' => TRUE,
       ]
@@ -97,7 +97,7 @@ class MultipleAssetLibraryTest extends AssetLibraryTestBase {
       ]],
       'dependencies' => [],
       'license' => [
-        'name' => $this->getLicenseName(),
+        'name' => 'GNU-GPL-2.0-or-later',
         'url' => 'https://www.drupal.org/licensing/faq',
         'gpl-compatible' => TRUE,
       ]
@@ -135,7 +135,7 @@ class MultipleAssetLibraryTest extends AssetLibraryTestBase {
       ]],
       'dependencies' => [],
       'license' => [
-        'name' => $this->getLicenseName(),
+        'name' => 'GNU-GPL-2.0-or-later',
         'url' => 'https://www.drupal.org/licensing/faq',
         'gpl-compatible' => TRUE,
       ]
@@ -161,7 +161,7 @@ class MultipleAssetLibraryTest extends AssetLibraryTestBase {
       ]],
       'dependencies' => [],
       'license' => [
-        'name' => $this->getLicenseName(),
+        'name' => 'GNU-GPL-2.0-or-later',
         'url' => 'https://www.drupal.org/licensing/faq',
         'gpl-compatible' => TRUE,
       ]
