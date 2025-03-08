@@ -11,7 +11,7 @@ global-styling:
       css/footer_custom.css: {}
       css/slider_custom.css: {}
       css/event_news_custom.css: {}
-      css/banners_custom.css: {}
+      css/banner_custom.css: {}
       css/services_custom.css: {}
       css/gallery_custom.css: {}
       css/header_custom.css: {}

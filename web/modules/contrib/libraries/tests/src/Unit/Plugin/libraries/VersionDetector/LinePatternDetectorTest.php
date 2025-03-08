@@ -67,7 +67,7 @@ class LinePatternDetectorTest extends UnitTestCase {
   /**
    * @return array
    */
-  public static function providerTestDetectVersionNoVersion(): array {
+  public function providerTestDetectVersionNoVersion() {
     $test_cases = [];
 
     $configuration = [
@@ -127,7 +127,7 @@ EOF
   /**
    * @return array
    */
-  public static function providerTestDetectVersion(): array {
+  public function providerTestDetectVersion() {
     $test_cases = [];
 
     $configuration = [

@@ -6,6 +6,7 @@ base theme: olivero
 
 libraries:
   - piotheme/global-styling
+  - core/drupal.toolbar
 
 
 regions:
