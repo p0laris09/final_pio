@@ -190,3 +190,17 @@
     font-size: 13px;
   }
 }
+.field--name-field-introduction .field__item {
+  text-align: justify;
+  font-size: 17px;
+  margin: 0 60px; /* Adjust left and right margins */
+  text-indent: 50px;
+  line-height: 1.5; /* Sets line spacing to 1.5 */
+}
+.field__label {
+  font-size: 1.5em; /* Adjusts size similar to <h3> */
+  font-weight: normal;
+  margin-bottom: 10px; /* Adds spacing below */
+}
+
+

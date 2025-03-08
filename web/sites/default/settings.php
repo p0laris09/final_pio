@@ -905,3 +905,7 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql\\src\\Driver\\Database\\mysql\\',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_rSemyPIGJ8Y0SLSYeCZLQ0vkgacoRGC6jlLCGrnp-ZPNJRgwE2H86Qiel0oM81cQvyzXmFqkoQ/sync';
+$settings['twig_debug'] = TRUE;
+$config['system.performance']['cache']['page']['max_age'] = 0;
+$config['system.performance']['css']['preprocess'] = FALSE;
+$config['system.performance']['js']['preprocess'] = FALSE;
