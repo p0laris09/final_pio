@@ -1,0 +1,43 @@
+<section id="gallery" class="gallery-images">
+    <div class="container reveal active">
+        <div class="row mb-5">
+            <div class="col-12 text-center mb-3">
+                <h4 class="text-center text-dark">
+                    {{ view.field.field_title.original_value }}
+                </h4>
+                <small class="gallery-small-text text-black">
+                    <i>Courtesy by {{ view.field.field_courtesy.original_value }}</i>
+                </small>
+            </div>
+
+            <div class="col-12 news-back-page text-start">
+                <a class="btn btn-news-ct" href="/gallery" role="button">
+                <i class="fas fa-arrow-circle-left"></i> Back to Gallery
+                </a>
+            </div>
+        </div>
+
+        <div class="gallery-pages">
+            <div class="row">
+                {% for row in view.result %}
+                    {% set entity = row._entity %}
+                    {% if entity.field_gallery_content|length > 0 %}
+                        {% for image_entity in entity.field_gallery_content %}
+                            {% set image_url = file_url(image_entity.entity.uri.value) %}
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="gallery-pic">
+                                    <a href="{{ image_url }}" data-fancybox="gallery" data-caption="{{ entity.label }}">
+                                        <img src="{{ image_url }}" class="img-thumbnail rounded" alt="{{ entity.label }}" width="100%">
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p>No images available.</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</section>
