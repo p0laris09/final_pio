@@ -1,8 +1,76 @@
-<?php 
+<?php
+
+use Drupal\webform\Entity\Webform;
+use Drupal\webform\WebformSubmissionForm;
+use Drupal\Core\Url;
+
 function piotheme_preprocess_node(&$variables) {
   if ($variables['node']->bundle() == 'services') {
     $variables['brgyid_req'] = $variables['node']->get('field_brgyid_req')->view();
     $variables['clearance_req'] = $variables['node']->get('field_clearance_req')->view();
   }
+  if ($variables['node']->bundle() == 'gallery_album') {
+    $node = $variables['node'];
+    
+    if ($node->hasField('field_gallery_content') && !$node->get('field_gallery_content')->isEmpty()) {
+      $media_items = $node->get('field_gallery_content')->referencedEntities();
+      
+      if (!empty($media_items)) {
+        // Get the first media item
+        $media = reset($media_items);
+        
+        // Override the media thumbnail link to point to the node page instead of the media entity
+        $variables['content']['field_gallery_content'][0]['#url'] = $node->toUrl();
+      }
+    }
+  }
+  $webform = Webform::load('contact_us');
+
+  if ($webform) {
+    $variables['webform_rendered'] = \Drupal::service('renderer')->render(
+      WebformSubmissionForm::create(\Drupal::getContainer())->buildForm([], new \Drupal\Core\Form\FormState())
+    );
+  }
 }
+
+function piotheme_preprocess_views_view(&$variables) {
+  if ($variables['view']->id() == 'gallery_grid') {
+    foreach ($variables['rows'] as &$row) {
+      if (!empty($row['#row']->_entity->field_image->entity)) {
+        $file = $row['#row']->_entity->field_image->entity;
+        $url = file_create_url($file->getFileUri());
+        $row['file_url'] = $url;
+      }
+       $node = $row->_entity;
+      if ($node instanceof Node) {
+        $row->url = $node->toUrl()->toString();
+      }
+    }
+  }
+if ($variables['view']->id() == 'gallery_item') {
+    foreach ($variables['rows'] as &$row) {
+        if (!empty($row['#row']->_entity)) {
+            $entity = $row['#row']->_entity;
+
+            // Get the image URL if available
+            if (!empty($entity->get('field_image')->entity)) {
+                $file = $entity->get('field_image')->entity;
+                $row['file_url'] = file_create_url($file->getFileUri());
+            }
+
+            // Get the node URL
+            if ($entity instanceof \Drupal\node\NodeInterface) {
+                $row['url'] = $entity->toUrl()->toString();
+                $row['title'] = $entity->label(); // Fetch the title
+            }
+
+            // Get field_courtesy if available
+            if ($entity->hasField('field_courtesy') && !$entity->get('field_courtesy')->isEmpty()) {
+                $row['field_courtesy'] = $entity->get('field_courtesy')->value;
+            }
+        }
+    }
+}
+}
+
 ?>

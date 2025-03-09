@@ -1,17 +1,17 @@
-<section id="" class="service-offer-banner common_bg">
+<section id="services" class="service-offer-banner common_bg">
   <div class="container">
     <div class="row service-offer">
-      <div class="col-12 col-md-4 service-offer-img text-center">
-        <img src="https://brgypiodelpilarmakati.com.ph/assets/images/services/id.svg" alt="">
+      <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 service-offer-img text-center">
+        <img src="{{ base_path ~ directory }}/images/id.svg" alt="Barangay ID">
       </div>
-      <div class="col-12 col-md-8 service-offer-info">
+      <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 service-offer-info">
         <h5>Barangay ID</h5>
         <p>
           <b>New Applicant</b>
-          {% if content.field_brgyid_req is defined %}
+          {% if node.field_brgyid_req is defined %}
             <ol>
-              {% for item in content.field_brgyid_req['#items'] %}
-                <li>{{ item['value'] }}</li>
+              {% for item in node.field_brgyid_req %}
+                <li>{{ item.value }}</li>
               {% endfor %}
             </ol>
           {% endif %}
@@ -23,16 +23,16 @@
     </div>
 
     <div class="row service-offer">
-      <div class="col-12 col-md-4 service-offer-img text-center order-lg-last">
-        <img src="https://brgypiodelpilarmakati.com.ph/assets/images/services/docs.svg" alt="">
+      <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 service-offer-img text-center order-lg-last">
+        <img src="{{ base_path ~ directory }}/images/docs.svg" alt="Barangay Clearance">
       </div>
-      <div class="col-12 col-md-8 service-offer-info">
+      <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 service-offer-info">
         <h5>Barangay Clearance</h5>
         <p>
-          {% if content.field_clearance_req is defined %}
+          {% if node.field_clearance_req is defined %}
             <ol>
-              {% for item in content.field_clearance_req['#items'] %}
-                <li>{{ item['value'] }}</li>
+              {% for item in node.field_clearance_req %}
+                <li>{{ item.value }}</li>
               {% endfor %}
             </ol>
           {% endif %}
