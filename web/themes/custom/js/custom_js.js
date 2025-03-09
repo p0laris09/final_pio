@@ -114,3 +114,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 })(jQuery, Drupal);
+
+  // Create a mapping of old titles to new titles
+  const titleMap = {
+    "about_history": "HISTORY",
+    "about mission": "MISSION",
+    "about_vision": "VISION",
+    "about significant": "SIGNIFICANT PERSON/s or FAMILIES",
+    "about_feastday": "FEAST DAYS"
+  };
+
+  // Loop through all the field__label elements
+  document.querySelectorAll('.field__label').forEach(label => {
+    const text = label.innerText.trim(); // Get the current text
+    if (titleMap[text]) {
+      label.innerText = titleMap[text]; // Replace it with the new title
+    }
+  });
+
+  if (window.location.pathname === '/about') {
+    document.body.classList.add('page-about');
+  }

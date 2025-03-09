@@ -1,0 +1,50 @@
+<section id="" class="news-section ">
+  <div class="container reveal active">
+    <div class="row row-cols-1 row-cols-md-2 g-4 news d-flex justify-content-start">
+      {% for row in rows[0]['#rows'] %}
+        {% set date = row['#row']._entity.field_news_date.value %}
+        <div class="col news-col">
+          <div class="card mb-3">
+            <div class="row g-0">
+              <!-- Display Date -->
+              {% if date %}
+                <div class="col-3 news-date">
+                  <h1>{{ date|date('d') }}</h1>
+                  <h6 class="text-white">{{ date|date('M Y') }}</h6>
+                </div>
+              {% endif %}
+
+              <div class="col-9 news-details">
+                <div class="card-body">
+                  <!-- Display Event Title -->
+                  {% if row['#row']._entity.field_news_title.value %}
+                    <div class="card-title">
+                      <h4 class="text-white">{{ row['#row']._entity.field_news_title.value }}</h4>
+                    </div>
+                  {% endif %}
+
+                  <!-- Display Trimmed Body -->
+                  {% if row['#row']._entity.body.value %}
+                    <p class="card-text">
+                      {{ row['#row']._entity.body.value|striptags|slice(0, 150) ~ '...' }}
+                    </p>
+                  {% endif %}
+                  <!-- Generate Link from Entity -->
+                {% if row['#row']._entity.nid.value %}
+                  {% set link = path('entity.node.canonical', {'node': row['#row']._entity.nid.value}) %}
+                  <p class="card-text card-a">
+                    <a href="{{ link }}" role="button">
+                      Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                  </p>
+                {% endif %}
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+      {% endfor %}
+    </div>
+  </div>
+</section>

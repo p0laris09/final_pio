@@ -5,4 +5,6 @@ function piotheme_preprocess_node(&$variables) {
     $variables['clearance_req'] = $variables['node']->get('field_clearance_req')->view();
   }
 }
+
+
 ?>

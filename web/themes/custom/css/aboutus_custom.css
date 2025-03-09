@@ -201,6 +201,34 @@
   font-size: 1.5em; /* Adjusts size similar to <h3> */
   font-weight: normal;
   margin-bottom: 10px; /* Adds spacing below */
+  text-align: center;
 }
 
 
+#block-piotheme-informationofaboutus .field__item{
+  text-align: justify;
+  font-size: 17px;
+  margin: 0 60px; /* Adjust left and right margins */
+  text-indent: 50px;
+  line-height: 1.5; /* Sets line spacing to 1.5 */
+}
+
+
+
+.profile-content{
+  background-color: white;
+}
+/* Justify text in all tables */
+table {
+  text-align: justify;
+}
+
+
+.others-content{
+  background-color: gray; /* White to Gray gradient */
+  margin-top: -5rem;
+}
+
+.news-details{
+  text-align: justify;
+}

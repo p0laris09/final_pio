@@ -1,0 +1,136 @@
+<section id="" class="second-section">
+    <div class="container-xl reveal active">
+        <!-- Latest News -->
+        <div class="row">
+            <div class="col-12 zi-2 text-center">
+                <h2 class="text-center h5 mb-5">Latest News</h2>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4 news d-flex justify-content-center">
+            {% if content['#view'].result is not empty %}
+                {% for row in content['#view'].result %}
+                    {% set entity = row._entity %}
+                    {% set date = entity.field_news_date.value %}
+
+                    <div class="col news-col">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <!-- Display Date -->
+                                {% if date %}
+                                    <div class="col-3 news-date">
+                                        <h1>{{ date|date('d') }}</h1>
+                                        <h6 class="text-white">{{ date|date('M Y') }}</h6>
+                                    </div>
+                                {% endif %}
+
+                                <div class="col-9 news-details">
+                                    <div class="card-body">
+                                        <!-- Display Event Title -->
+                                        {% if entity.field_news_title.value %}
+                                            <div class="card-title">
+                                                <h4 class="text-white">{{ entity.field_news_title.value }}</h4>
+                                            </div>
+                                        {% endif %}
+
+                                        <!-- Display Trimmed Body -->
+                                        {% if entity.body.value %}
+                                            <p class="card-text">
+                                                {{ entity.body.value|striptags|slice(0, 150) ~ '...' }}
+                                            </p>
+                                        {% endif %}
+
+                                        <!-- Generate Link from Entity -->
+                                        {% if entity.nid.value %}
+                                            {% set link = path('entity.node.canonical', {'node': entity.nid.value}) %}
+                                            <p class="card-text card-a">
+                                                <a href="{{ link }}" role="button">
+                                                    Read More <i class="fas fa-arrow-right"></i>
+                                                </a>
+                                            </p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No news found.</p>
+            {% endif %}
+        </div>
+
+        <div class="row mt-4 mb-5">
+            <div class="col-12 news-btn">
+                <a class="btn btn-news-ct" href="/news" role="button">
+                    SEE MORE NEWS <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Latest Events -->
+<div class="row">
+    <div class="col-12 text-center"><h2 class="text-center h5 mb-5 mt-5">Latest Events</h2></div>
+</div>
+<div class="row row-cols-1 row-cols-md-2 g-4 news d-flex justify-content-center">
+    {% if content['#view'].result is not empty %}
+        {% for row in content['#view'].result %}
+            {% set entity = row._entity %}
+            {% set date = entity.field_even_date.value %}
+
+            <div class="col news-col">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <!-- Display Date -->
+                        {% if date %}
+                            <div class="col-3 news-date">
+                                <h1>{{ date|date('d') }}</h1>
+                                <h6 class="text-white">{{ date|date('M Y') }}</h6>
+                            </div>
+                        {% endif %}
+
+                        <div class="col-9 news-details">
+                            <div class="card-body">
+                                <!-- Display Event Title -->
+                                {% if entity.field_event_title.value %}
+                                    <div class="card-title">
+                                        <h4 class="text-white">{{ entity.field_event_title.value }}</h4>
+                                    </div>
+                                {% endif %}
+
+                                <!-- Display Trimmed Body -->
+                                {% if entity.body.value %}
+                                    <p class="card-text">
+                                        {{ entity.body.value|striptags|slice(0, 150) ~ '...' }}
+                                    </p>
+                                {% endif %}
+
+                                <!-- Generate Link from Entity -->
+                                {% if entity.nid.value %}
+                                    {% set link = path('entity.node.canonical', {'node': entity.nid.value}) %}
+                                    <p class="card-text card-a">
+                                        <a href="{{ link }}" role="button">
+                                            Read More <i class="fas fa-arrow-right"></i>
+                                        </a>
+                                    </p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No events found.</p>
+    {% endif %}
+</div>
+
+    </div>
+    <div class="row mt-4 mb-5">
+            <div class="col-12 news-btn">
+                <a class="btn btn-news-ct" href="/events" role="button">
+                    SEE MORE EVENTS <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+</section>

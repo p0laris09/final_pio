@@ -1,0 +1,31 @@
+<section id="" class="news-section">
+  <div class="container reveal active">
+    <div class="row mb-5">
+      <div class="col-12 news-back-page">
+        <a class="btn btn-news-ct" href="/news" role="button">
+          <i class="fas fa-arrow-circle-left"></i> Back to News
+        </a>
+      </div>
+    </div>
+
+    <div class="row news-pages">
+      <!-- Display Image -->
+      {% if node.field_news_image.entity.uri.value %}
+        <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 order-lg-last pages-img">
+          <img src="{{ file_url(node.field_news_image.entity.uri.value) }}" class="img-fluid rounded-start" alt="News Image">
+        </div>
+      {% endif %}
+
+      <!-- Display Title and Body -->
+      <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 pages-title">
+        {% if node.title.value %}
+          <h4>{{ node.title.value }}</h4>
+        {% endif %}
+        
+        {% if node.body.value %}
+          <p class="text-justify">{{ node.body.value|raw }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

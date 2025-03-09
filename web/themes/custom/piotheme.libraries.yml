@@ -4,19 +4,21 @@ global-styling:
     theme:
       assets/third_party/bootstrap/css/bootstrap.min.css: {}
       assets/third_party/fontawesome/css/all.css: {}
-      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css:
+        {}
       css/contactus_custom.css: {}
       css/custom_styles.css: {}
       css/navbar_custom.css: {}
       css/footer_custom.css: {}
       css/slider_custom.css: {}
-      css/event_news_custom.css: {}
+      css/event_news_style.css: {}
       css/banner_custom.css: {}
       css/services_custom.css: {}
       css/gallery_custom.css: {}
       css/header_custom.css: {}
       css/aboutus_custom.css: {}
-      
+      css/officials_custom.css: {}
+
   js:
     https://www.googletagmanager.com/gtag/js?id=G-XKXXKF1PS2: {}
     assets/third_party/bootstrap/js/bootstrap.bundle.js: {}
