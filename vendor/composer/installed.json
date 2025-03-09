@@ -2180,124 +2180,122 @@
             },
             "install-path": "../../web/modules/contrib/libraries"
         },
+{
+    "name": "drupal/views_slideshow",
+    "version": "5.0.1",
+    "version_normalized": "5.0.1.0",
+    "source": {
+        "type": "git",
+        "url": "https://git.drupalcode.org/project/views_slideshow.git",
+        "reference": "5.0.1"
+    },
+    "dist": {
+        "type": "zip",
+        "url": "https://ftp.drupal.org/files/projects/views_slideshow-5.0.1.zip",
+        "reference": "5.0.1",
+        "shasum": "f181dd86f40f0a65186ee818daded06a98e5d510"
+    },
+    "require": {
+        "drupal/core": "^9 || ^10 || ^11"
+    },
+    "type": "drupal-module",
+    "extra": {
+        "drupal": {
+            "version": "5.0.1",
+            "datestamp": "1724040371",
+            "security-coverage": {
+                "status": "covered",
+                "message": "Covered by Drupal's security advisory policy"
+            }
+        }
+    },
+    "installation-source": "dist",
+    "notification-url": "https://packages.drupal.org/8/downloads",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "authors": [
         {
-            "name": "drupal/symfony_mailer",
+            "name": "Neslee Canil Pinto",
+            "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+            "role": "Maintainer"
+        },
+        {
+            "name": "nickdickinsonwilde",
+            "homepage": "https://www.drupal.org/user/3094661"
+        },
+        {
+            "name": "redndahead",
+            "homepage": "https://www.drupal.org/user/160320"
+        },
+        {
+            "name": "vbouchet",
+            "homepage": "https://www.drupal.org/user/1671428"
+        }
+    ],
+    "description": "Describes relationships between entities.",
+    "homepage": "https://www.drupal.org/project/views_slideshow",
+    "support": {
+        "source": "https://git.drupalcode.org/project/views_slideshow",
+        "issues": "https://www.drupal.org/project/issues/views_slideshow"
+    },
+    "install-path": "../../web/modules/contrib/views_slideshow"
+},
+{
+    "name": "drupal/symfony_mailer",
+    "version": "1.5.0",
+    "version_normalized": "1.5.0.0",
+    "source": {
+        "type": "git",
+        "url": "https://git.drupalcode.org/project/symfony_mailer.git",
+        "reference": "1.5.0"
+    },
+    "dist": {
+        "type": "zip",
+        "url": "https://ftp.drupal.org/files/projects/symfony_mailer-1.5.0.zip",
+        "reference": "1.5.0",
+        "shasum": "dbec446b7112ac2e50580ceda9e80ea806498047"
+    },
+    "require": {
+        "drupal/core": "^10.3 || ^11",
+        "html2text/html2text": "^4.0.1",
+        "symfony/mailer": "^6.0 || ^7.0",
+        "tijsverkoyen/css-to-inline-styles": "^2.2"
+    },
+    "type": "drupal-module",
+    "extra": {
+        "drupal": {
             "version": "1.5.0",
-            "version_normalized": "1.5.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/symfony_mailer.git",
-                "reference": "1.5.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/symfony_mailer-1.5.0.zip",
-                "reference": "1.5.0",
-                "shasum": "dbec446b7112ac2e50580ceda9e80ea806498047"
-            },
-            "require": {
-                "drupal/core": "^10.3 || ^11",
-                "html2text/html2text": "^4.0.1",
-                "symfony/mailer": "^6.0 || ^7.0",
-                "tijsverkoyen/css-to-inline-styles": "^2.2"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "1.5.0",
-                    "datestamp": "1723739690",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^11"
-                    }
-                }
-            },
-            "installation-source": "dist",
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "adamps",
-                    "homepage": "https://www.drupal.org/user/2650563"
-                }
-            ],
-            "description": "Symfony Mailer",
-            "homepage": "https://www.drupal.org/project/symfony_mailer",
-            "support": {
-                "source": "https://git.drupalcode.org/project/symfony_mailer"
-            },
-            "install-path": "../../web/modules/contrib/symfony_mailer"
+            "datestamp": "1723739690",
+            "security-coverage": {
+                "status": "covered",
+                "message": "Covered by Drupal's security advisory policy"
+            }
         },
+        "drush": {
+            "services": {
+                "drush.services.yml": "^11"
+            }
+        }
+    },
+    "installation-source": "dist",
+    "notification-url": "https://packages.drupal.org/8/downloads",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "authors": [
         {
-            "name": "drupal/twig_tweak",
-            "version": "3.4.0",
-            "version_normalized": "3.4.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/twig_tweak.git",
-                "reference": "3.4.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/twig_tweak-3.4.0.zip",
-                "reference": "3.4.0",
-                "shasum": "1f47f71b4cfbad97fff11db1adc72c311bb1645e"
-            },
-            "require": {
-                "drupal/core": "^10.3 || ^11.0",
-                "ext-json": "*",
-                "php": ">=8.1",
-                "twig/twig": "^3.10.3"
-            },
-            "suggest": {
-                "symfony/var-dumper": "Better dump() function for debugging Twig variables"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "3.4.0",
-                    "datestamp": "1721562308",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^10 || ^11"
-                    }
-                }
-            },
-            "installation-source": "dist",
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "chi",
-                    "homepage": "https://www.drupal.org/user/556138"
-                }
-            ],
-            "description": "A Twig extension with some useful functions and filters for Drupal development.",
-            "homepage": "https://www.drupal.org/project/twig_tweak",
-            "keywords": [
-                "Drupal",
-                "Twig"
-            ],
-            "support": {
-                "source": "https://git.drupalcode.org/project/twig_tweak",
-                "issues": "https://www.drupal.org/project/issues/twig_tweak"
-            },
-            "install-path": "../../web/modules/contrib/twig_tweak"
-        },
+            "name": "adamps",
+            "homepage": "https://www.drupal.org/user/2650563"
+        }
+    ],
+    "description": "Symfony Mailer",
+    "homepage": "https://www.drupal.org/project/symfony_mailer",
+    "support": {
+        "source": "https://git.drupalcode.org/project/symfony_mailer"
+    },
+    "install-path": "../../web/modules/contrib/symfony_mailer"
+},
         {
             "name": "drupal/webform",
             "version": "6.2.9",

@@ -904,4 +904,20 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'autoload' => 'core/modules/mysql\\src\\Driver\\Database\\mysql\\',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_rSemyPIGJ8Y0SLSYeCZLQ0vkgacoRGC6jlLCGrnp-ZPNJRgwE2H86Qiel0oM81cQvyzXmFqkoQ/sync';
+if (!defined('DRUPAL_ROOT')) {
+  define('DRUPAL_ROOT', getcwd());
+}
+
+
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
+$settings['cache']['bins']['render'] = 'cache.backend.null';
+$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
+
+$settings['twig_debug'] = TRUE;
+
+$config['system.performance']['css']['preprocess'] = FALSE;
+$config['system.performance']['js']['preprocess'] = FALSE;
+
+$config['system.logging']['error_level'] = 'verbose';
+
+

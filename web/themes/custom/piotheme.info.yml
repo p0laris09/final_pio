@@ -8,7 +8,6 @@ libraries:
   - piotheme/global-styling
   - core/drupal.toolbar
 
-
 regions:
   header: "Header"
   navigation: "Navigation"

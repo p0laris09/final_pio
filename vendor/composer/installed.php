@@ -424,6 +424,13 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/views_slideshow' => array(
+            'pretty_version' => '5.0.1',
+            'version' => '5.0.1.0',
+            'reference' => '5.0.1',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/views_slideshow',
+),
         'drupal/symfony_mailer' => array(
             'pretty_version' => '1.5.0',
             'version' => '1.5.0.0',

@@ -53,3 +53,7 @@ body {
         object-fit: contain; /* Ensures proper display on mobile */
     }
 }
+.text-justify {
+    text-align: justify;
+  }
+  

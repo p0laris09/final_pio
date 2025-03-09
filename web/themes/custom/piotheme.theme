@@ -72,5 +72,4 @@ if ($variables['view']->id() == 'gallery_item') {
     }
 }
 }
-
 ?>
