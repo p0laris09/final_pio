@@ -1,0 +1,202 @@
+/* gallery Section */
+.gallery-images {
+    background-color: var(--firstSectionBg);
+    padding: 50px 0;
+}
+
+.gallery-images .zi-2 {
+    z-index: 2;
+}
+
+.gallery-images h2, .gallery-images h5 {
+    color: #fff;
+}
+
+.gallery-images .gallery-btn {
+    display: flex;
+    justify-content: flex-start; /* Align button to the left */
+    z-index: 2;
+}
+
+.gallery-images .h5 {
+    border-bottom: 4px solid var(--secondary-color);
+    display: inline-block;
+    width: 177px;
+    font-size: 26px;
+    padding: 8px 0;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.gallery-images .btn-gallery-ct {
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    border: 1px solid var(--primary-color);
+    display: inline-block; /* Ensures the button is displayed inline-block */
+}
+
+.gallery-images .btn-gallery-ct i {
+    color: black !important; /* Ensures the icon is black */
+    margin-right: 5px;
+}
+
+.gallery-images .btn-gallery-ct:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.gallery-images .card {
+    background: rgba(10, 17, 136, 0.8509803922);
+    color: #fff;
+    letter-spacing: 0.85px;
+    z-index: 2;
+    border: 0;
+}
+
+.gallery-images .card .news-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-images .card .news-date h1 {
+    color: var(--secondary-color);
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.gallery-images .card .card-title {
+    padding: 5px 0px;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.gallery-images .card .card-title h5 {
+    margin-bottom: 0;
+    font-size: 17px;
+    height: 103px;
+    align-items: center;
+    justify-content: flex-start;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.gallery-images .card .card-text, .gallery-images .card .card-footer {
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.gallery-images .card .card-a {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: center;
+}
+
+.gallery-images .card .card-a a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 3px 7px;
+    border-radius: 6px;
+}
+
+.gallery-images .card .card-a a i {
+    margin-left: 5px;
+}
+
+.gallery-images .card .card-a a:hover {
+    color: #1e1e1e;
+    background-color: var(--secondary-color);
+}
+
+.gallery-images .card .row .col-md-4 {
+    display: grid;
+    align-items: center;
+}
+
+.gallery-images .card .row .col-md-4 img {
+    height: 100%;
+}
+
+.gallery-images .gallery-pages {
+    background-color: #fff;
+}
+
+.gallery-images .gallery-pages .pages-title {
+    padding: 30px;
+}
+
+.gallery-images .gallery-pages .pages-title p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #636466;
+    font-family: "Sarabun", sans-serif;
+}
+
+.gallery-images .gallery-pages .pages-title h4 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 45px;
+}
+
+.gallery-images .gallery-pages .pages-img {
+    padding: 30px;
+}
+
+.gallery-images .gallery-pages .pages-img img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.gallery-images .gallery-back-page {
+    text-align: left; /* Ensures the button is aligned left */
+}
+
+.gallery-images .gallery-back-page a {
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+/* Style the small text */
+.gallery-images .gallery-small-text {
+    font-size: 0.875rem; /* Small text */
+    font-style: italic;
+    color: black; /* Ensures the text color is black */
+}
+
+.gallery-pic img {
+    width: 100%;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.gallery-pic {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  padding: 10px;
+  height: 220px;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+      display: block !important;
+    visibility: visible !important;
+}

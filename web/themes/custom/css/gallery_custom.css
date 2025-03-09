@@ -5,72 +5,75 @@
 }
 
 .gallery-section h2 {
-      margin-top: 40px; /* Adjust the value to your preference */
+  margin-top: 40px;
   text-align: center;
   font-size: 36px;
-  color: black; /* Changed to black */
+  color: black;
   margin-bottom: 30px;
 }
 
-.gallery-section .gallery-grid {
+.gallery-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
 
-.gallery-section .gallery-item {
-  width: calc(33.333% - 20px);
+.gallery-item {
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  text-align: center;
+  padding: 10px;
+  height: 220px;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
-.gallery-section .gallery-item img {
+.gallery-item img {
   width: 100%;
-  height: auto;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.gallery-item:hover {
+  transform: none; /* Remove the scaling effect on hover */
+}
+
+.gallery-item a {
+  color: black;
+  text-decoration: none;
   display: block;
 }
 
-.gallery-section .gallery-item:hover {
-  transform: scale(1.05);
+.gallery-item .gallery-label {
+  font-size: 16px; /* Set the font size to 16px */
+  margin-top: 10px; /* Ensure the label is 10px away from the bottom of the gallery item */
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
-.gallery-section a {
-  color: black; /* Changed to black */
-  text-decoration: none;
-}
-
+/* Responsive Design */
 @media (max-width: 992px) {
-  .gallery-section .gallery-item {
-    width: calc(50% - 20px);
+  .gallery-item {
+    width: 210px; /* Fixed width */
+    margin: 50px; /* Adjust margin to maintain spacing */
+    margin-bottom: 10px; /* Keep the bottom margin */
   }
 }
 
 @media (max-width: 768px) {
-  .gallery-section .gallery-item {
-    width: 100%;
+  .gallery-item {
+    width: 210px; /* Fixed width */
+    margin: 20px; /* Adjust margin to maintain spacing */
+    margin-bottom: 10px; /* Keep the bottom margin */
   }
-}
-
-.views-view-gallery-view
-{
-  background: url("../images/about-bg.jpg") fixed no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  min-height: 100vh;
-  position: relative;
-}
-.views-view-gallery-view:before
-{
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(245, 245, 245, 0.8);
-  z-index: 1;
 }

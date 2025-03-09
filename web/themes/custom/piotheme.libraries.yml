@@ -18,6 +18,8 @@ global-styling:
       css/header_custom.css: {}
       css/aboutus_custom.css: {}
       css/officials_custom.css: {}
+      css/gallery-image.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css: {}
 
   js:
     https://www.googletagmanager.com/gtag/js?id=G-XKXXKF1PS2: {}
@@ -26,6 +28,7 @@ global-styling:
     js/custom_js.js: {}
     js/jquery.cycle.all.min.js: {}
     js/footer_custom.js: {}
+    https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js: {}
 
   dependencies:
     - core/jquery

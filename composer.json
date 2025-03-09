@@ -17,16 +17,17 @@
     "require": {
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.5",
+        "drupal/colorbox": "^2.1",
+        "drupal/computed_field": "^3.0",
         "drupal/core-composer-scaffold": "^10.3",
         "drupal/core-project-message": "^10.3",
         "drupal/core-recommended": "^10.3",
-<<<<<<< HEAD
-        "drupal/devel": "^5.0",
         "drupal/libraries": "^4.0",
         "drupal/views_slideshow": "^5.0",
-=======
         "drupal/libraries": "4.0",
->>>>>>> 09caff1c44163c72ab3aa31bc9a40103ba9ec893
+        "drupal/devel": "^5.3",
+        "drupal/symfony_mailer": "^1.5",
+        "drupal/twig_tweak": "3.4",
         "drupal/webform": "^6.2",
         "drush/drush": "^13.3"
     },

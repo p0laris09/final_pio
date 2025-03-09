@@ -1,0 +1,25 @@
+<section id="gallery" class="about-content1 common_bg">
+    <div class="container">
+        <div class="row about-data text-center">
+            <h2>ALBUMS</h2>
+        </div>
+        <div class="row about-data d-flex justify-content-center mt-2">
+            {% for row in view.result %}
+                {% set entity = row._entity %}
+                <div class="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-4 fs-img text-center">
+                    <a class="text-dark" href="{{ path('view.gallery_item.page_1', {'arg_0': entity.id()}) }}">
+                        <div class="gallery-item">
+                            {% if entity.field_gallery_content is not empty %}
+                            <img src="{{ file_url(entity.field_gallery_content.entity.uri.value) }}" 
+                                     class="img-thumbnail rounded gallery-image" 
+                                     alt="{{ entity.label }}"
+                                     width="200px" height="200px">
+                            {% endif %}
+                        </div>
+                        <small class="gallery-label">{{ entity.label }}</small>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
